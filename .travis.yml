@@ -16,7 +16,7 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: bash --login -c "source $HOME/.nvm/nvm.sh && nvm use $TRAVIS_NODE_VERSION && ./deploy.sh"
+  script: bash --login -c "source $HOME/.nvm/nvm.sh && nvm use $TRAVIS_NODE_VERSION && $TRAVIS_BUILD_DIR/deploy.sh"
   on:
     branch: testprod
 
