@@ -1,7 +1,3 @@
-npm install -g strongloop --ignore-scripts
-npm run build
-cd $TRAVIS_BUILD_DIR
-slc build --npm
 echo "-----BEGIN RSA PRIVATE KEY-----" > $TRAVIS_BUILD_DIR/key
 echo "$SSH_KEY_RAW" |tr " " "\n" >> $TRAVIS_BUILD_DIR/key
 echo "-----END RSA PRIVATE KEY-----" >> $TRAVIS_BUILD_DIR/key
