@@ -13,12 +13,6 @@ install:
 script:
   - npm test
 
-before_deploy:
-  - npm install -g strongloop --ignore-scripts
-  - npm run build
-  - cd ..
-  - slc build --npm
-
 deploy:
   provider: script
   skip_cleanup: true
