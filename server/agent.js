@@ -5,7 +5,7 @@ const KJUR = require('jsrsasign').KJUR;
 
 const superagent = superagentPromise(_superagent, Promise);
 
-const GITHUB_API = 'https://api.github.com';
+const GITHUB_API = 'https://apie.github.com';
 
 const getToken = (options) => new Promise((resolve, reject) => {
   if (options.installationId) {
