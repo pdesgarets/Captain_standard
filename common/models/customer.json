@@ -3,16 +3,21 @@
   "plural": "Customers",
   "base": "User",
   "idInjection": true,
-  "injectOptionsFromRemoteContext": true,
   "options": {
     "validateUpsert": true
   },
+  "injectOptionsFromRemoteContext": true,
   "properties": {},
   "validations": [],
   "relations": {
     "projects": {
       "type": "hasAndBelongsToMany",
       "model": "Project",
+      "foreignKey": ""
+    },
+    "scripts": {
+      "type": "hasMany",
+      "model": "Script",
       "foreignKey": ""
     }
   },
@@ -59,6 +64,12 @@
       "principalId": "$owner",
       "permission": "ALLOW",
       "property": "__get__projects"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "__get__scripts"
     }
   ],
   "methods": {}
